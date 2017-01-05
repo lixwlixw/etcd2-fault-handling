@@ -6,4 +6,4 @@ etcd1 启动时 member目录清空，启动参数 -initial-cluster-state existin
 2,etcd0执行 etcdctl member add etcd2 http://etcd2ip:2380
 etcd2 启动时 member目录清空，启动参数 -initial-cluster-state existing ,-initial-cluster etcd0=http://etcd1ip:2380,etcd1=http://etcd1ip:2380,etcd2=http://etcd2ip:2380
 
-#其他参数不变 参数详情查看(https://github.com/lixwlixw/etcd2-fault-handling/blob/master/new-cluster)
+其他参数不变 参数详情查看(https://github.com/lixwlixw/etcd2-fault-handling/blob/master/new-cluster)
