@@ -1,0 +1,7 @@
+etcd0 启动时-v 把之前备份的数据挂进去 启动参数添加 -force-new-cluster , -initial-cluster etcd0=http://etcd0ip:2380
+etcdctl member update 节点id http://etcd0ip:2380
+添加节点：
+1,etcd0执行 etcdctl member add etcd1 http://etcd1ip:2380
+etcd1 启动时 member目录清空，启动参数 -initial-cluster-state existing ,-initial-cluster etcd0=http://etcd1ip:2380,etcd1=http://etcd1ip:2380
+2,etcd0执行 etcdctl member add etcd2 http://etcd2ip:2380
+etcd2 启动时 member目录清空，启动参数 -initial-cluster-state existing ,-initial-cluster etcd0=http://etcd1ip:2380,etcd1=http://etcd1ip:2380,etcd2=http://etcd2ip:2380
